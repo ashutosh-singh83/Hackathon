@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBI Guide Bot</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-header">
+            <img src="78ccbed026345f4205fa73cccda110e2.png" alt="Bot Icon">
+            <span>RBI Guide Bot</span>
+        </div>
+        <div id="chat-messages">
+            <!-- Bot responses and user inputs will be dynamically added here -->
+        </div>
+        <div id="user-input">
+            <input type="text" id="user-query" placeholder="Type your query...">
+            <button id="submit-btn" onclick="submitQuery()">Submit</button>
+        </div>
+        <div id="additional-options">
+            <button onclick="saveConversation()">Save Conversation</button>
+            <button onclick="openFeedbackForm()">Give Feedback</button>
+            <button onclick="viewSavedConversations()">View Saved Conversations</button>
+            <button onclick="clearSavedConversations()">Clear Saved Conversations</button>
+            <button onclick="startNewConversation()">Start New Conversation</button>
+        </div>
+    </div>
+
+    <div id="feedback-form">
+        <h2>Feedback Form</h2>
+        <label for="feedback-text">Your Feedback:</label>
+        <textarea id="feedback-text" rows="4" cols="50"></textarea>
+        <button onclick="submitFeedback()">Submit Feedback</button>
+    </div>
+
+    <div id="saved-conversations">
+        <h2>Saved Conversations</h2>
+        <ul id="conversations-list"></ul>
+    </div>
+
+    <script src="home.js"></script>
+</body>
+</html>
